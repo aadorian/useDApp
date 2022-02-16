@@ -38,7 +38,7 @@ export  function Block() {
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
                 base00: "white",
-                base01: "#a876f5",
+                base01: "#white",
                 base02: "#a876f5",
                 base03: "#9c54fc",
                 base04: "#9c54fc",
