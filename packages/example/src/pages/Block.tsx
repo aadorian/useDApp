@@ -57,7 +57,7 @@ export  function Block() {
                 base0F: "#d0baf5"
             }}
           src={{nftTransactions}} />
-           <TextInline><Label>Balance: </Label>{formatEther(items)}</TextInline>
+           <TextInline><Label>Balance: </Label>{items}</TextInline>
        
             <ContentRow>
               <Label>Chain id:</Label> <TextInline>{chainId}</TextInline>
