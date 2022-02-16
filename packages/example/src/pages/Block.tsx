@@ -4,8 +4,6 @@ import { Container, ContentBlock, ContentRow, MainContent, Section } from '../co
 import { Label } from '../typography/Label'
 import { TextInline } from '../typography/Text'
 import ReactJson from 'react-json-view'
-import { formatEther } from 'ethers/lib/utils'
-
 
 
 export  function Block() {
@@ -23,7 +21,7 @@ export  function Block() {
           'Content-Type': 'application/json',
      
         }}
-     const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK`,headers )
+    const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK`,headers )
 		const data = await response.json()
     setItems(data.result)
 		setNFTData(data) 
