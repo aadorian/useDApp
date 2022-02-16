@@ -4,6 +4,7 @@ import { Container, ContentBlock, ContentRow, MainContent, Section } from '../co
 import { Label } from '../typography/Label'
 import { TextInline } from '../typography/Text'
 import ReactJson from 'react-json-view'
+import { formatEther } from 'ethers/lib/utils'
 
 
 
@@ -12,7 +13,7 @@ export  function Block() {
   const { chainId, account } = useEthers()
   const { timestamp, difficulty } = useBlockMeta()
   const [nftTransactions, setNFTData] = useState(null)
-
+  const [items, setItems] = useState<any[]>([])
   useEffect(() => {
 		getData()
 		async function getData() {
@@ -24,7 +25,9 @@ export  function Block() {
         }}
      const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK`,headers )
 		const data = await response.json()
+    setItems(data.result)
 		setNFTData(data) 
+    
 		}
 	}, [])
         
@@ -32,6 +35,8 @@ export  function Block() {
     <MainContent>
       <Container>
         <Section>
+       
+       
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
                 base00: "white",
@@ -52,6 +57,8 @@ export  function Block() {
                 base0F: "#d0baf5"
             }}
           src={{nftTransactions}} />
+           <TextInline><Label>Balance </Label>{formatEther(items)}</TextInline>
+       
             <ContentRow>
               <Label>Chain id:</Label> <TextInline>{chainId}</TextInline>
             </ContentRow>
