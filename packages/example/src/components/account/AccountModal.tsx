@@ -42,7 +42,7 @@ export const AccountModal = ({ setShowModal }: AccountModalProps) => {
             <AccountAddress>Address: {account}</AccountAddress>
             <LinkWrapper>
               <Link href={getExplorerAddressLink(account, chainId)} target="_blank" rel="noopener noreferrer">
-                Show on etherscan
+                Show on Aurora
                 <LinkIconWrapper>
                   <ShareIcon />
                 </LinkIconWrapper>

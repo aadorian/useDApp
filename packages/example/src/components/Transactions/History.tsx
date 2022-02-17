@@ -82,7 +82,7 @@ const TransactionLink = ({ transaction }: TransactionLinkProps) => (
         target="_blank"
         rel="noopener noreferrer"
       >
-        View on Etherscan
+        View on Aurora
         <LinkIconWrapper>
           <ShareIcon />
         </LinkIconWrapper>
