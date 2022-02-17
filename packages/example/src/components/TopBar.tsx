@@ -13,7 +13,7 @@ export function TopBar() {
           <ToMain href="/">
             <Avatar round="10px" size= "50px" src='https://i.imgur.com/U1dkSOb.png' /> 
             <ToMainBottom>
-              Near <Handshaking>|</Handshaking> Aurora
+              Near <Handshaking>|</Handshaking> Aurora 
             </ToMainBottom>
           </ToMain>
           <HeaderNavLinks>

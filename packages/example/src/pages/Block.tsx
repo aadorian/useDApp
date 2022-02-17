@@ -77,6 +77,7 @@ export  function Block() {
           </ContentBlock>
         </Section>
       </Container>
+      
     </MainContent>
   )
 }
