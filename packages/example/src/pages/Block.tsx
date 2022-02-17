@@ -7,6 +7,7 @@ import ReactJson from 'react-json-view'
 import Avatar from 'react-avatar'
 
 
+
 export  function Block() {
   const blockNumber = useBlockNumber()
   const { chainId, account } = useEthers()
@@ -35,7 +36,7 @@ export  function Block() {
       <Container>
         <Section>
         <Avatar round="10px" size= "50px" src='https://i.imgur.com/U1dkSOb.png' /> 
-      
+       
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
                 base00: "white",
@@ -56,7 +57,7 @@ export  function Block() {
                 base0F: "#d0baf5"
             }}
           src={{getJSON}} />
-           <TextInline><Label>Balance: </Label>{balance}</TextInline>
+           <TextInline><Label>Balance: </Label> {balance}</TextInline>
        
             <ContentRow>
               <Label>Chain id:</Label> <TextInline>{chainId}</TextInline>

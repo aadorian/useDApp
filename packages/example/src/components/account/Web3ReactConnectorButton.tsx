@@ -28,7 +28,7 @@ export const Web3ReactConnectorButton = () => {
   const activateProvider = async () => {
     const web3Connector = new WalletConnectConnector({
       rpc: NETWORK_CONNECTIONS,
-      bridge: 'https://bridge.walletconnect.org',
+      bridge: 'https://testnet.aurora.dev/',
       qrcode: true,
     })
     await activate(web3Connector)
