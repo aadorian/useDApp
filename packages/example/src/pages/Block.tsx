@@ -11,8 +11,8 @@ export  function Block() {
   const blockNumber = useBlockNumber()
   const { chainId, account } = useEthers()
   const { timestamp, difficulty } = useBlockMeta()
-  const [nftTransactions, setNFTData] = useState(null)
-  const [items, setItems] = useState<any[]>([])
+  const [getJSON, setJSON] = useState(null)
+  const [balance, setBalance] = useState<any[]>([])
   useEffect(() => {
 		getData()
 		async function getData() {
@@ -24,8 +24,8 @@ export  function Block() {
         }}
     const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK`,headers )
 		const data = await response.json()
-    setItems(data.result)
-		setNFTData(data) 
+    setBalance(data.result)
+		setJSON(data) 
     
 		}
 	}, [])
@@ -55,8 +55,8 @@ export  function Block() {
                 base0E: "rgba(70, 70, 230, 1)",
                 base0F: "#d0baf5"
             }}
-          src={{nftTransactions}} />
-           <TextInline><Label>Balance: </Label>{items}</TextInline>
+          src={{getJSON}} />
+           <TextInline><Label>Balance: </Label>{balance}</TextInline>
        
             <ContentRow>
               <Label>Chain id:</Label> <TextInline>{chainId}</TextInline>
