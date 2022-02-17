@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 import { Colors, Shadows, Sizes, Transitions } from '../global/styles'
 import { HeaderContainer } from './base/base'
+import Avatar from 'react-avatar'
 
 export function TopBar() {
   return (
@@ -10,9 +11,9 @@ export function TopBar() {
       <HeaderContainer>
         <HeaderNav>
           <ToMain href="/">
-            <span>useDapp</span>
+            <Avatar round="10px" size= "50px" src='https://i.imgur.com/U1dkSOb.png' /> 
             <ToMainBottom>
-              Ethereum <Handshaking>🤝</Handshaking> React
+              Near <Handshaking>|</Handshaking> Aurora
             </ToMainBottom>
           </ToMain>
           <HeaderNavLinks>
