@@ -7,8 +7,6 @@ import { TextInline } from '../typography/Text'
 import { Title } from '../typography/Title'
 
 import { AccountButton } from '../components/account/AccountButton'
-import { Image } from 'react-image-and-background-image-fade'
-
 const STAKING_CONTRACT = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
 
 export function Balance() {
@@ -44,13 +42,7 @@ export function Balance() {
             )}
             
           </ContentBlock>
-          <Image
-        src='https://i.imgur.com/0aWvhr0.png'
-        width='10%'
-        height='10%'
-        alt='Near'
-        title='Near'
-      />
+        
         </Section>
        
       </Container>
