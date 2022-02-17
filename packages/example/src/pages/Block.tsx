@@ -9,6 +9,8 @@ import Avatar from 'react-avatar'
 
 
 export  function Block() {
+  const KEY = 'YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK'
+  const ERC20_ADDRESS = '0x1e138b96BeF348baBcF13C35956502F36c0C6e84'
   const blockNumber = useBlockNumber()
   const { chainId, account } = useEthers()
   const { timestamp, difficulty } = useBlockMeta()
@@ -23,8 +25,24 @@ export  function Block() {
           'Content-Type': 'application/json',
      
         }}
-    const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK`,headers )
-		const data = await response.json()
+      //Get ETH Balance for a single Address _OK
+    // const response= await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=balance&address=${account}&tag=latest&apikey=${KEY}`,headers )
+
+    //Get a list of 'Normal' Transactions By Address -OK transacciones de una direccion contrato
+    // const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=account&action=txlist&address=${ERC20_ADDRESS}&startblock=1&endblock=99999999&sort=asc&apikey=${KEY}`,headers )
+
+    // Gas Price -OK
+     //const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=proxy&action=eth_gasPrice&apikey=${KEY}`,headers )
+
+      
+    //Get a list of "ERC721 - Token Transfer Events" by Address
+
+    //Get Contract ABI for Verified Contract Source Codes -OK
+    const response = await fetch(`https://api-testnet.aurorascan.dev/api?module=contract&action=getabi&address=${ERC20_ADDRESS}&apikey=${KEY}`,headers )
+
+   
+    
+    const data = await response.json()
     setBalance(data.result)
 		setJSON(data) 
     
@@ -57,8 +75,7 @@ export  function Block() {
                 base0F: "#9c9c9c"
             }}
           src={{getJSON}} />
-           <TextInline><Label>Balance: </Label> {balance}</TextInline>
-       
+         
             <ContentRow>
               <Label>Chain id:</Label> <TextInline>{chainId}</TextInline>
             </ContentRow>
