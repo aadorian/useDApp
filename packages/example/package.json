@@ -21,6 +21,7 @@
     "react": "^17.0.0",
     "react-avatar": "^4.0.0",
     "react-dom": "^17.0.0",
+    "react-image-and-background-image-fade": "^1.0.8",
     "react-json-view": "^1.21.3",
     "react-router-dom": "^5.2.0",
     "styled-components": "^5.2.1",

@@ -7,6 +7,7 @@ import { TextInline } from '../typography/Text'
 import { Title } from '../typography/Title'
 
 import { AccountButton } from '../components/account/AccountButton'
+import { Image } from 'react-image-and-background-image-fade'
 
 const STAKING_CONTRACT = '0x00000000219ab540356cBB839Cbe05303d7705Fa'
 
@@ -24,6 +25,7 @@ export function Balance() {
             <AccountButton />
           </SectionRow>
           <ContentBlock>
+         
             {stakingBalance && (
               <ContentRow>
                 <Label>ETH2 staking contract holds:</Label> <TextInline>{formatEther(stakingBalance)}</TextInline>{' '}
@@ -40,9 +42,19 @@ export function Balance() {
                 <Label>Ether balance:</Label> <TextInline>{formatEther(userBalance)}</TextInline> <Label>ETH</Label>
               </ContentRow>
             )}
+            
           </ContentBlock>
+          <Image
+        src='https://i.imgur.com/0aWvhr0.png'
+        width='10%'
+        height='10%'
+        alt='Near'
+        title='Near'
+      />
         </Section>
+       
       </Container>
+     
     </MainContent>
   )
 }
