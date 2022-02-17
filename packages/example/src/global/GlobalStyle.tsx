@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 import HelveticaNeue from '../assets/fonts/SFUIRegular.woff2'
-import HelveticaNeueBold from '../assets/fonts/SFUIRegular.woff2'
+import HelveticaNeueBold from '../assets/fonts/SFUIBlack.woff2'
 import HelveticaNeueMedium from '../assets/fonts/HelveticaNeueMedium.woff2'
 import { Colors, Fonts } from './styles'
 
@@ -31,7 +31,7 @@ export const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "HelveticaNeue";
     src: url(${HelveticaNeueBold}) format('woff2');
-    font-weight: 700;
+    font-weight: 300;
     font-style: normal;
     font-display: swap;
   }
