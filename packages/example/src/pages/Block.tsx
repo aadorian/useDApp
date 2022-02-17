@@ -4,6 +4,7 @@ import { Container, ContentBlock, ContentRow, MainContent, Section } from '../co
 import { Label } from '../typography/Label'
 import { TextInline } from '../typography/Text'
 import ReactJson from 'react-json-view'
+import Avatar from 'react-avatar'
 
 
 export  function Block() {
@@ -33,8 +34,8 @@ export  function Block() {
     <MainContent>
       <Container>
         <Section>
-       
-       
+        <Avatar round="10px" size= "50px" src='https://i.imgur.com/U1dkSOb.png' /> 
+      
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
                 base00: "white",
