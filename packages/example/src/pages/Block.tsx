@@ -39,22 +39,22 @@ export  function Block() {
        
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
-                base00: "white",
+                base00: "#white",
                 base01: "#white",
-                base02: "#a876f5",
-                base03: "#9c54fc",
-                base04: "#9c54fc",
+                base02: "#9c9c9c",
+                base03: "#9c9c9c",
+                base04: "#9c9c9c",
                 base05: "#444",
                 base06: "#444",
                 base07: "#444",
-                base08: "#444",
-                base09: "#9c54fc",
-                base0A: "rgba(70, 70, 230, 1)",
-                base0B: "rgba(70, 70, 230, 1)",
-                base0C: "rgba(70, 70, 230, 1)",
-                base0D: "rgba(70, 70, 230, 1)",
-                base0E: "rgba(70, 70, 230, 1)",
-                base0F: "#d0baf5"
+                base08: "#9c9c9c",
+                base09: "#9c9c9c",
+                base0A: "#9c9c9c",
+                base0B: "#9c9c9c",
+                base0C: "#9c9c9c",
+                base0D: "#9c9c9c",
+                base0E: "#9c9c9c",
+                base0F: "#9c9c9c"
             }}
           src={{getJSON}} />
            <TextInline><Label>Balance: </Label> {balance}</TextInline>
