@@ -20,35 +20,15 @@ export function TopBar() {
               {' '}
               Balance{' '}
             </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/prices">
-              {' '}
-              Prices{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/block">
+             <HeaderLink activeClassName="active-page" to="/block">
               {' '}
               Block{' '}
             </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/tokens">
-              {' '}
-              Tokens{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/send">
+             <HeaderLink activeClassName="active-page" to="/send">
               {' '}
               Send Ether{' '}
             </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/transactions">
-              {' '}
-              Transactions{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/web3modal">
-              {' '}
-              Web3Modal example{' '}
-            </HeaderLink>
-            <HeaderLink activeClassName="active-page" to="/web3react">
-              {' '}
-              Web3React Connector example{' '}
-            </HeaderLink>
-          </HeaderNavLinks>
+              </HeaderNavLinks>
         </HeaderNav>
       </HeaderContainer>
     </Header>
