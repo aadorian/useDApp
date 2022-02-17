@@ -51,7 +51,7 @@ export const AccountModal = ({ setShowModal }: AccountModalProps) => {
                 <Link onClick={() => console.log(navigator.clipboard.writeText(account))}>Copy to clipboard</Link>
               )}
             </LinkWrapper>
-            <BalanceWrapper>ETH: {balance && formatBalance(balance)}</BalanceWrapper>
+            <BalanceWrapper>NEAR: {balance && formatBalance(balance)}</BalanceWrapper>
           </AccountInfo>
           <HistoryWrapper>
             <TransactionsList />
