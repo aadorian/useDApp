@@ -77,7 +77,7 @@ export const SendEthForm = () => {
     <ContentBlock style={{ padding: 0 }}>
       <TitleRow>
         <CellTitle>Send transaction</CellTitle>
-        <BalanceWrapper>Your ETH balance: {formatBalance(balance)}</BalanceWrapper>
+        <BalanceWrapper>Your Near balance: {formatBalance(balance)}</BalanceWrapper>
       </TitleRow>
       <LabelRow>
         <Label style={{ marginLeft: '58px' }} htmlFor={'EthInput'}>
