@@ -5,9 +5,21 @@ import { Label } from '../typography/Label'
 import { TextInline } from '../typography/Text'
 import ReactJson from 'react-json-view'
 import Avatar from 'react-avatar'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { docco} from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
+const URL_API_CALL = `https://api-testnet.aurorascan.dev/api?module=proxy&
+action=eth_gasPrice
+&apikey=${process.env.REACT_APP_API_KEY}`
 
-
+const Componente = (url: any) => {
+  const codeString = url
+  return (
+    <SyntaxHighlighter language="javascript" style={docco} >
+      {codeString}
+    </SyntaxHighlighter>
+  )
+}
 export  function Block() {
   const KEY = 'YGRNMEH7YWIWISSNVWFRRXI1HI8ETIKQHK'
   const ERC20_ADDRESS = '0x1e138b96BeF348baBcF13C35956502F36c0C6e84'
@@ -54,7 +66,7 @@ export  function Block() {
       <Container>
         <Section>
         <Avatar round="10px" size= "50px" src='https://i.imgur.com/U1dkSOb.png' /> 
-       
+        {Componente(URL_API_CALL)}
           <ContentBlock>
           <ReactJson collapsed={2} displayDataTypes={false} theme={{
                 base00: "#white",
