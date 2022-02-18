@@ -105,9 +105,8 @@ const HeaderLink = styled(NavLink)`
   padding: 10px;
   font-size: 12px;
   line-height: 24px;
-  font-weight: 700;
+  font-weight: 300;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
   transition: ${Transitions.all};
   white-space: nowrap;
 
