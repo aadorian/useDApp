@@ -6,7 +6,7 @@ import { TextInline } from '../typography/Text'
 import ReactJson from 'react-json-view'
 import Avatar from 'react-avatar'
 import SyntaxHighlighter from 'react-syntax-highlighter'
-import { docco} from 'react-syntax-highlighter/dist/esm/styles/hljs'
+import { dark} from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 const URL_API_CALL = `https://api-testnet.aurorascan.dev/api?module=proxy&
 action=eth_gasPrice
@@ -15,7 +15,7 @@ action=eth_gasPrice
 const Componente = (url: any) => {
   const codeString = url
   return (
-    <SyntaxHighlighter language="javascript" style={docco} >
+    <SyntaxHighlighter language="javascript" style={dark} >
       {codeString}
     </SyntaxHighlighter>
   )
