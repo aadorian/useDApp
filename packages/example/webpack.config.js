@@ -3,6 +3,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const { ESBuildMinifyPlugin } = require('esbuild-loader')
 const ReactRefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+const webpack = require('webpack')
+
+require('dotenv').config();
 
 const isDevelopment = process.env.NODE_ENV !== 'production'
 
@@ -22,6 +25,9 @@ module.exports = {
           to: 'favicon.ico',
         },
       ],
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env)
     }),
   ].filter(Boolean),
   module: {
